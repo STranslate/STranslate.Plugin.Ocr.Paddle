@@ -7,6 +7,6 @@
     <PackageVersion Include="Sdcb.OpenVINO" Version="0.7.0" />
     <PackageVersion Include="Sdcb.OpenVINO.PaddleOCR.Models.Online" Version="0.7.0" />
     <PackageVersion Include="Sdcb.OpenVINO.runtime.win-x64" Version="2025.2.0.1" />
-    <PackageVersion Include="STranslate.Plugin" Version="1.0.1" />
+    <PackageVersion Include="STranslate.Plugin" Version="1.0.2" />
   </ItemGroup>
 </Project>

@@ -34,5 +34,46 @@
                 </ui:SettingsCard>
             </ui:SettingsExpander.Items>
         </ui:SettingsExpander>
+
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_Models}">
+            <ui:SettingsCard.HeaderIcon>
+                <ui:FontIcon FontFamily="{StaticResource {x:Static ui:ThemeKeys.FluentSystemIconsKey}}" Glyph="&#xF0757;" />
+            </ui:SettingsCard.HeaderIcon>
+            <Grid>
+                <TextBlock Text="{DynamicResource STranslate_Plugin_Ocr_Paddle_Models_Tip}" TextWrapping="Wrap" />
+            </Grid>
+        </ui:SettingsCard>
+
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_Info}">
+            <ui:SettingsCard.HeaderIcon>
+                <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.Info_20_Regular}" />
+            </ui:SettingsCard.HeaderIcon>
+            <!--  通过Grid容器与内部ColumnDefinition=Auto协商宽度避免TextBlock过宽  -->
+            <Grid>
+                <TextBlock Text="{DynamicResource STranslate_Plugin_Ocr_Paddle_Info_Text}" TextWrapping="Wrap" />
+            </Grid>
+        </ui:SettingsCard>
+
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_Link_Source}">
+            <ui:SettingsCard.HeaderIcon>
+                <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.PersonSupport_20_Regular}" />
+            </ui:SettingsCard.HeaderIcon>
+            <ui:HyperlinkButton NavigateUri="https://github.com/STranslate/STranslate.Plugin.Ocr.Paddle">
+                <Grid>
+                    <TextBlock Text="github.com/STranslate/STranslate.Plugin.Ocr.Paddle" TextWrapping="Wrap" />
+                </Grid>
+            </ui:HyperlinkButton>
+        </ui:SettingsCard>
+
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_Link_Other}">
+            <ui:SettingsCard.HeaderIcon>
+                <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.PersonSupport_20_Regular}" />
+            </ui:SettingsCard.HeaderIcon>
+            <ui:HyperlinkButton NavigateUri="https://github.com/sdcb/openvino.net">
+                <Grid>
+                    <TextBlock Text="github.com/sdcb/openvino.net" TextWrapping="Wrap" />
+                </Grid>
+            </ui:HyperlinkButton>
+        </ui:SettingsCard>
     </ikw:SimpleStackPanel>
 </UserControl>
