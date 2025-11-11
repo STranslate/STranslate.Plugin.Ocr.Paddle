@@ -41,4 +41,4 @@ jobs:
           body_path: CHANGELOG.md
           draft: true # 设置为 false 可立即发布版本
           files: |
-            ./.artifacts/Release/plugins/${{ env.REPO_NAME }}.spkg
+            ./.artifacts/Release/plugins/*.spkg
