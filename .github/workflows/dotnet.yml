@@ -31,7 +31,7 @@ jobs:
         shell: pwsh
         run: |
           Write-Host "Repo name from github.event.repository.name: $env:REPO_NAME"
-          dotnet build ".\$env:REPO_NAME.sln" --configuration Release --no-incremental --force
+          dotnet build ".\$env:REPO_NAME\$env:REPO_NAME.csproj" --configuration Release --no-incremental --force
 
       - name: Release
         uses: softprops/action-gh-release@v2
