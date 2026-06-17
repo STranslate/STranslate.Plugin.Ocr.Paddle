@@ -9,7 +9,7 @@ using Control = System.Windows.Controls.Control;
 namespace STranslate.Plugin.Ocr.Paddle;
 
 /// <summary>
-///     <see href="https://www.paddleocr.ai/main/version3.x/algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html"/>
+///     <see href="https://www.paddleocr.ai/main/version3.x/algorithm/PP-OCRv6/PP-OCRv6_multi_languages.html"/>
 /// </summary>
 public class Main : IOcrPlugin
 {
@@ -98,12 +98,11 @@ public class Main : IOcrPlugin
     private FullOcrModel GetModel(LangEnum language)
     {
         Sdcb.OpenVINO.PaddleOCR.Models.Online.Settings.GlobalModelDirectory = Settings.ModelsDirectory;
-        var model = language switch
+        var model = Settings.ModelSize switch
         {
-            LangEnum.Auto => OnlineFullModels.ChineseV4.DownloadAsync().GetAwaiter().GetResult(),
-            LangEnum.Korean => OnlineFullModels.KoreanV4.DownloadAsync().GetAwaiter().GetResult(),
-            LangEnum.Japanese => OnlineFullModels.JapanV4.DownloadAsync().GetAwaiter().GetResult(),
-            _ => OnlineFullModels.ChineseV4.DownloadAsync().GetAwaiter().GetResult(),
+            "Tiny" => OnlineFullModels.ChineseV6Tiny.DownloadAsync().GetAwaiter().GetResult(),
+            "Medium" => OnlineFullModels.ChineseV6Medium.DownloadAsync().GetAwaiter().GetResult(),
+            _ => OnlineFullModels.ChineseV6Small.DownloadAsync().GetAwaiter().GetResult(),
         };
 
         return model;

@@ -35,6 +35,16 @@
             </ui:SettingsExpander.Items>
         </ui:SettingsExpander>
 
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_ModelSize}" Description="{DynamicResource STranslate_Plugin_Ocr_Paddle_ModelSize_Description}">
+            <ui:SettingsCard.HeaderIcon>
+                <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.Resize_20_Regular}" />
+            </ui:SettingsCard.HeaderIcon>
+            <ComboBox
+                MinWidth="120"
+                ItemsSource="{Binding ModelSizes}"
+                SelectedItem="{Binding SelectedModelSize}" />
+        </ui:SettingsCard>
+
         <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Ocr_Paddle_Models}">
             <ui:SettingsCard.HeaderIcon>
                 <ui:FontIcon FontFamily="{StaticResource {x:Static ui:ThemeKeys.FluentSystemIconsKey}}" Glyph="&#xF0757;" />

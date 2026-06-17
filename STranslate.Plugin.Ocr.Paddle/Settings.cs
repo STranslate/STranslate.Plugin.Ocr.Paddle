@@ -17,4 +17,6 @@ public class Settings
         }
     }
     public string ModelsDirectory { get; set; } = Path.Combine(DefaultPath, "Models");
+
+    public string ModelSize { get; set; } = "Small";
 }
