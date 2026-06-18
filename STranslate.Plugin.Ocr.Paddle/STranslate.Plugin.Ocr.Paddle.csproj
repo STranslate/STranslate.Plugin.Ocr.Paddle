@@ -57,8 +57,8 @@
 
     <ItemGroup>
         <PackageReference Include="Sdcb.OpenCvSharp4.mini.runtime.win-x64" Version="4.11.0.35" />
-        <PackageReference Include="Sdcb.OpenVINO" Version="0.7.0" />
-        <PackageReference Include="Sdcb.OpenVINO.PaddleOCR.Models.Online" Version="0.7.0" />
+        <PackageReference Include="Sdcb.OpenVINO" Version="0.8.1" />
+        <PackageReference Include="Sdcb.OpenVINO.PaddleOCR.Models.Online" Version="0.8.1" />
         <PackageReference Include="Sdcb.OpenVINO.runtime.win-x64" Version="2025.2.0.1" />
         <PackageReference Include="STranslate.Plugin" Version="1.0.4" />
     </ItemGroup>
